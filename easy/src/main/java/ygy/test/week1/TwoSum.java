@@ -1,4 +1,4 @@
-package ygy.test.day1;
+package ygy.test.week1;
 
 import java.util.Arrays;
 

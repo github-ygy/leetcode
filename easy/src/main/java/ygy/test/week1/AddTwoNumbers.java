@@ -1,4 +1,4 @@
-package ygy.test.day1;
+package ygy.test.week1;
 
 /**
  * Created by guoyao on 2017/9/3.

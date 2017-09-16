@@ -36,6 +36,7 @@ public class RemoveDuplicatesfromSortedArray {
         return  count;
     }
 
+    //leet code 参考答案
     public static int removeDuplicates_2(int[] nums) {
         if (nums.length == 0) return 0;
         int i = 0;

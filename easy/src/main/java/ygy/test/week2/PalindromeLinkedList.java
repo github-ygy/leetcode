@@ -41,13 +41,13 @@ public class PalindromeLinkedList {
         return true;
     }
 
-    private static ListNode reverseNode(ListNode head) {
+    private static ListNode reverseNode(ListNode head) {  //l1 l2 l3
         ListNode temp = null ;
         while (head != null) {
-            ListNode nextNode = head.next ;
-            head.next = temp ;
-            temp = head ;
-            head = nextNode ;
+            ListNode nextNode = head.next ;  // l2 l3  // l3  // null
+            head.next = temp ;            // null     //l1 null   // l2 l1 null
+            temp = head ;                 //l1  null     // l2 l1 null  //l3 l2 l1 null
+            head = nextNode ;            // l2 l3    //l3   //
         }
         return temp ;
     }

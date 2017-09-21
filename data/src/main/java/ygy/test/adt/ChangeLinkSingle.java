@@ -3,7 +3,7 @@ package ygy.test.adt;
 /**
  * Created by guoyao on 2017/9/20.
  */
-public class ChangeLink {
+public class ChangeLinkSingle {
 
     public static void main(String[] agrs) {
 

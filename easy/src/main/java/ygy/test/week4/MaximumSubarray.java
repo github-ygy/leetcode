@@ -37,6 +37,6 @@ public class MaximumSubarray {
             subNum=Math.max(subNum + nums[i], nums[i]);
             maxNum=Math.max(maxNum, subNum);
         }
-        return goingNum;
+        return maxNum;
     }
 }

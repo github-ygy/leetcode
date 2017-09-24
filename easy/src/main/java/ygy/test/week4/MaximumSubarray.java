@@ -31,11 +31,11 @@ public class MaximumSubarray {
 
     //leetcode
     public static int maxSubArray_2(int[] nums) {
-        int startNum=nums[0];
-        int goingNum=nums[0];
+        int subNum=nums[0];
+        int maxNum=nums[0];
         for (int i=1; i < nums.length; i++) {
-            startNum=Math.max(startNum + nums[i], nums[i]);
-            goingNum=Math.max(goingNum, startNum);
+            subNum=Math.max(subNum + nums[i], nums[i]);
+            maxNum=Math.max(maxNum, subNum);
         }
         return goingNum;
     }

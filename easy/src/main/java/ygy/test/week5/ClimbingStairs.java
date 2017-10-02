@@ -20,7 +20,7 @@ public class ClimbingStairs {
      Note: Given n will be a positive integer.
      */
     public static int climbStairs(int n) {
-        // 最后一步可以采用1步，也可以采用两步
+        // 最后一步可以采用1步，也可以采用两步，其它与之前的可能性总数相同。
         //所以可能性是原始的f（n-1） 和 f（n-2）之和
         //所以总数为两者之和
         if(n == 0 || n == 1 || n == 2){return n;}

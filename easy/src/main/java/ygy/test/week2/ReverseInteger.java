@@ -39,4 +39,22 @@ public class ReverseInteger {
         int result  = (int )resultInt ;
         return x > 0 ? result : 0 - result;
     }
+
+    //leetcode answer
+    public static int reverse_2(int x)
+    {
+        int result = 0;
+
+        while (x != 0)
+        {
+            int tail = x % 10;
+            int newResult = result * 10 + tail;
+            if ((newResult - tail) / 10 != result)
+            { return 0; }
+            result = newResult;
+            x = x / 10;
+        }
+
+        return result;
+    }
 }

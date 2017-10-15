@@ -34,9 +34,10 @@ public class BalancedBinaryTree {
         }
         int l = getHeight(root.left);
         int r = getHeight(root.right);
+        //左右深度的绝对值大于1则为非avl树
         if (l == UNBALANCED || r == UNBALANCED || Math.abs(l-r) > 1) {
             return UNBALANCED;
         }
-        return 1 + Math.max(l,r);
+        return 1 + Math.max(l,r);   //左右深度
     }
 }

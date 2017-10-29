@@ -19,6 +19,39 @@ public class LinkedListCycle {
         }
     }
 
+    /**
+     * Given a linked list, determine if it has a cycle in it.
+     Follow up:
+     Can you solve it without using extra space?
+     */
+
+    //leetcode answaer
+    public static boolean hasCycle(ListNode head) {
+        if(head == null || head.next == null) return false;
+        ListNode temp=head,pre=head;
+        while (temp!=null && temp.next != null) {
+            if (head == temp.next) {
+                return true;
+            }
+            temp = temp.next ;
+            pre.next=head;
+            pre = temp;
+        }
+        return false;
+    }
+    public static boolean hasCycle_2(ListNode head) {
+        if(head == null || head.next == null) return false;
+        ListNode fast=head,slow=head;
+        while (fast!=null && fast.next != null) {
+            slow = slow.next;
+            fast=fast.next.next;
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static ListNode reverseList(ListNode head) {
         ListNode reverse=null;
         while (head != null) {
